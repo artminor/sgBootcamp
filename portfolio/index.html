@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
 
-  <!-- Portfolio part 4-->
-
   <head>
-    <title>Home</title>
+    <title>Jun's Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
+      table,
+      th,
+      td {
+        border: 1px solid #292533;
+        padding: 5px 10px 5px 10px;
+        border-spacing: 2px 5px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      td,
+      th {
+        height: 30px;
+      }
+
+      th {
+        background-color: #5b7d87;
+        color: white;
+      }
+
+      tr: nth-child(odd) {
+        background-color: #d5d2cb;
+      }
+
       h1 {
         color: red;
       }
@@ -20,17 +45,16 @@
 
     <div id="title">
       <h1> Jun's Portfolio </h1>
+
     </div>
 
     <div id="navigation">
-      <hr/>
-      <!-- The links we’ll need are:
-      projects.html, contactMe.html, and testimonials.h tml -->
+      <hr style="border-top: 3px double #8c8b8b" />
       <p>
         <a href="projects.html" target="_blank">Projects</a>
         <a href="contactMe.html" target="_blank">Contact Me</a>
         <a href="testimonials.html" target="_blank">Testimonials</a></p>
-      <hr/>
+      <hr style="border-top: 3px double #8c8b8b" />
     </div>
 
     <div id="main">

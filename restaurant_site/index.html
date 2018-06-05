@@ -3,15 +3,14 @@
 <html>
 
   <head>
+    <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <title>Home</title>
-    <style>
 
+    <style>
       p {
         display: block;
         margin: auto;
@@ -25,47 +24,20 @@
         padding: 5px;
       }
 
-      .image {
-        width: 400px;
-        height: 150px;
-        background-image: url('images/bananas.jpg');
-        background-size: 100%;
-        background-position: center;
-        margin: auto;
-        display: block;
+      #restaurantInfo {
+        background-color: AliceBlue;
       }
-
-      .navbar navbar-default {
-        margin: 0;
-        text-align: left;
-        display: block;
-      }
-
-      .navbar navbar-default a {
-        display: inline-block;
-        padding: 20px;
-      }
-
-      .content{
-        margin:auto;
-        text-align: center;
-      }
-
-      #main {
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-
     </style>
-
 
   </head>
 
   <body>
-    <div id="title">
-      <h1> Sugar Sugar </h1>
-    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
+    <div class="container">
+      <h1 class="page-header"> <em> Sugar Sugar </em> </h1>
+    </div>
 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -97,8 +69,9 @@
           <div class="content">
             <h4>Come Check Us Out&#33;</h4>
             <address>
-              123 Street, New York, NY, 10012 <br>
+              123 Street, New York, NY, 10012
             </address>
+            <p> Days: Monday - Friday <br> Hours: 8AM-8PM </p>
             <a href="tel: 929-350-8888"> tel: 929-350-8888 </a>
           </div>
         </div>

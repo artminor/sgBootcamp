@@ -3,12 +3,14 @@
 <html>
 
   <head>
-    <title>Home</title>
-    <style>
-      h1 {
-        color: blue;
-      }
+    <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <title>Home</title>
+
+    <style>
       p {
         display: block;
         margin: auto;
@@ -22,46 +24,31 @@
         padding: 5px;
       }
 
-      .image {
-        width: 400px;
-        height: 150px;
-        background-image: url('images/bananas.jpg');
-        background-size: 100%;
-        background-position: center;
-        margin: auto;
-        display: block;
-      }
-
-      #navigation {
-        margin: 0;
-        text-align: left;
-        display: block;
-      }
-
-      #navigation a {
-        display: inline-block;
-        padding: 20px;
-      }
-
-      #main {
-        padding-left: 5px;
-        padding-right: 5px;
+      #restaurantInfo {
+        background-color: AliceBlue;
       }
     </style>
+
   </head>
 
   <body>
-    <div id="title">
-      <h1> Sugar Sugar </h1>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <div class="container">
+      <h1 class="page-header"> <em> Sugar Sugar </em> </h1>
     </div>
 
-    <div id="navigation">
-      <hr style="border-top: 3px double #8c8b8b;" />
-      <a href="index.html" target="_blank">Home</a>
-      <a href="menu.html" target="_blank">Menu</a>
-      <a href="contactMe.html" target="_blank">Contact Us</a>
-      <hr style="border-top: 3px double #8c8b8b;" />
-    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html" target="_blank">Home</a></li>
+          <li><a href="menu.html" target="_blank">Menu</a></li>
+          <li><a href="contactMe.html" target="_blank">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
 
     <div id="main">
 
@@ -71,7 +58,7 @@
 
       <div id="restaurantInfo">
         <div class="content">
-          <h2>About Us</h2>
+          <h3>About Us</h3>
           <p>Sugar Sugar is the first dessert cafe dedicated to making snow ice in New York City. We aim to serve best snow ice(bingsu 빙수), originated from Korea, with various local flabors with all healthy ingredients directly from Korea. Not only specialized
             in ice related menus, but with many famouse local style brunch menus with deep roasted coffee. <br> Visit and Enjoy Sugar Suger!</p>
         </div>
@@ -80,10 +67,11 @@
 
         <div id="location">
           <div class="content">
-            <h3>Come Check Us Out&#33;</h3>
+            <h4>Come Check Us Out&#33;</h4>
             <address>
-              123 Street, New York, NY, 10012 <br>
+              123 Street, New York, NY, 10012
             </address>
+            <p> Days: Monday - Friday <br> Hours: 8AM-8PM </p>
             <a href="tel: 929-350-8888"> tel: 929-350-8888 </a>
           </div>
         </div>
@@ -93,7 +81,7 @@
       <div id="footer">
         <hr/>
         <footer>
-          <p>&copy; Jun 2018</p>
+          <p>&copy; Jun 2018 </p>
         </footer>
       </div>
 

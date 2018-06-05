@@ -1,0 +1,52 @@
+a:visited {
+  color: green !important;
+}
+
+p {
+    display: block;
+    margin: auto;
+    width: 400px;
+    border: 1px lightgrey;
+  }
+
+body {
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+  }
+
+
+table, th {
+  text-align: center;
+  margin: auto;
+  padding: 10px 10px;
+}
+.image {
+    width: 400px;
+    height: 150px;
+    background-image: url('images/bananas.jpg');
+    background-size: 100%;
+    background-position: center;
+    margin: auto;
+    display: block;
+}
+
+.navbar navbar-default {
+    margin: 0;
+    text-align: left;
+    display: block;
+}
+
+.navbar navbar-default a {
+    display: inline-block;
+}
+
+.content {
+    margin: auto;
+    text-align: center;
+}
+
+#main {
+    padding-left: 5px;
+    padding-right: 5px;
+}

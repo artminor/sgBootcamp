@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+
+    <title>Contact Me</title>
+
+
+
+
+
+  </head>
+
+  <body>
+    <div id="main">
+
+      <div class="container">
+        <h1 class="page-header"> <b> Sugar Sugar </b> </h1>
+      </div>
+
+      <div class="container container-fluid">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="index.html" target="_blank"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+          <li class="active"><a href="menu.html" target="_blank"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Menu</a></li>
+          <li class="active"><a href="contactMe.html" target="_blank"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div id="form">
+        <form action="submit.html" method="POST">
+          <!-- <div class="warning">
+            The following errors occured:
+          </div>
+          <p class="warning"> First Name is required. </p> -->
+          <label for="firstName">First Name:</label> <br />
+          <input type="text" id="firstName" name="firstName"> <br />
+          <label for="lastName">Last Name:</label><br />
+          <input type="text" id="lastName" name="lastName"> <br />
+          <label for="phone">Phone Number:</label><br />
+          <input type="text" id="phone" name="phone"> <br />
+          <label for="contact">Reason for Inquiry:</label><br />
+
+          <select id="contact" name="contact">
+          <option value="default" selected>Catering</option>
+          <option value="privateParty">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+          </select>
+
+          <br/>
+
+          <label for="info">Additional Information</label><br/>
+          <textarea id="info"></textarea><br />
+
+          <br/>
+
+          <p>Have you been to the restaurant?</p>
+          <input type="radio" id="choice1 " name="questionnaire " value="yes">
+          <label for="choice1">Yes</label>
+          <input type="radio" id="choice2 " name="questionnaire " value="no">
+          <label for="choice2">No</label><br/>
+
+
+          <p>Best time to contact you:</p>
+          <input type="checkbox" id="M" name="bestContactTime" value="Monday">
+          <label for="Monday">M</label>
+          <input type="checkbox" id="T" name="bestContactTime" value="Tuesday">
+          <label for="Tuesday">T</label>
+          <input type="checkbox" id="W" name="bestContactTime" value="Wednesday">
+          <label for="Wednesday">W</label>
+          <input type="checkbox" id="Th" name="bestContactTime" value="Thursday">
+          <label for="Thursday">Th</label>
+          <input type="checkbox" id="F" name="bestContactTime" value="Friday">
+          <label for="Friday">F</label>
+
+          <br/>
+
+          <input type="submit" name="submit " value="Send Request">
+
+          <hr/>
+
+          <div id="location">
+            <div class="content">
+              <h4>Come Check Us Out&#33;</h4>
+              <address>
+                123 Street, New York, NY, 10012
+              </address>
+              <p> Days: Monday - Friday <br> Hours: 8AM-8PM </p>
+              <a href="tel: 929-350-8888"> tel: 929-350-8888 </a>
+            </div>
+          </div>
+
+      </div>
+
+
+    </div>
+    <hr/>
+    <footer>
+      <p>&copy; Jun 2018</p>
+    </footer>
+    </div>
+
+
+    <script>
+      $(".nav li").on("click", function() {
+        $(".nav li").removeClass("active");
+        $(this).addClass("active");
+      });
+    </script>
+
+  </body>
+
+</html>

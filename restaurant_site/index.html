@@ -39,15 +39,20 @@
       <h1 class="page-header"> <em> Sugar Sugar </em> </h1>
     </div>
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html" target="_blank">Home</a></li>
-          <li><a href="menu.html" target="_blank">Menu</a></li>
-          <li><a href="contactMe.html" target="_blank">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>
+
+
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html" target="_blank">Home</a></li>
+              <li><a href="menu.html" target="_blank">Menu</a></li>
+              <li><a href="contactMe.html" target="_blank">Contact Us</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
 
 
     <div id="main">
@@ -85,8 +90,16 @@
         </footer>
       </div>
 
-    </div>
 
+</div>
+
+<script>
+$(".nav li").on("click", function(){
+  $(".nav li").removeClass("active");
+  $(this).addClass("active");
+});
+
+</script>
   </body>
 
 </html>

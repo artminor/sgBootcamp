@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Restaurant Site-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+
+  <title>Home</title>
+
+</head>
+
+<body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <div class="container">
+    <h1 class="page-header"> <b> Sugar Sugar </b> </h1>
+  </div>
+
+  <div class="container container-fluid">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="index.html" target="_blank"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+      <li class="active"><a href="menu.html" target="_blank"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Menu</a></li>
+      <li class="active"><a href="contactMe.html" target="_blank"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Contact Us</a></li>
+    </ul>
+  </div>
+
+
+  <div id="main">
+
+    <div class="image">
+      <!-- <img src="images/bananas.jpg" alt="bananas" style="width: 400px; height: 150px"> -->
+    </div>
+
+    <div id="restaurantInfo">
+      <div class="content">
+        <h3>About Us</h3>
+        <p>Sugar Sugar is the first dessert cafe dedicated to making snow ice in New York City. We aim to serve best snow ice(bingsu 빙수), originated from Korea, with various local flabors with all healthy ingredients directly from Korea. Not only specialized
+          in ice related menus, but with many famouse local style brunch menus with deep roasted coffee. <br> Visit and Enjoy Sugar Suger!</p>
+      </div>
+
+      <hr/>
+
+      <div id="location">
+        <div class="content">
+          <h4>Come Check Us Out&#33;</h4>
+          <address>
+              123 Street, New York, NY, 10012
+            </address>
+          <p> Days: Monday - Friday <br> Hours: 8AM-8PM </p>
+          <a href="tel: 929-350-8888"> tel: 929-350-8888 </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <hr/>
+      <footer>
+        <p>&copy; Jun 2018 </p>
+      </footer>
+    </div>
+
+
+  </div>
+
+  <script>
+    $(".nav li").on("click", function() {
+      $(".nav li").removeClass("active");
+      $(this).addClass("active");
+    });
+  </script>
+
+</body>
+
+</html>

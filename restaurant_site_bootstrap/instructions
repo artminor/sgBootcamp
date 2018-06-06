@@ -1,4 +1,4 @@
-Use a jumbotron or page header to call out big news - your restaurant is opening a new location!
+
 Make the site responsive using Bootstrap's grid system.
 The menu items should stack well, with no overlapping.
 The front page content should stack as well.
@@ -8,8 +8,6 @@ We're opening a new location!
 We're rolling out our seasonal menu, with special options for this season.
 The Drink of the Month is SG Special Brew.
 Make sure that users who have JavaScript disabled know that this site is best viewed with JavaScript enabled.
-
-
 Your header and footer must match across the pages, so store their styles in an external file called restaurantStyles.css.
 Apply all positioning CSS styles for the image on the home page as an inline style.
 Apply all styles for the menu and contact form in internal style sheets.
@@ -26,4 +24,5 @@ Add a section to the menu for beverages, with a table like the one below.
 Style this table to match your site's look and feel.
 
 checked
+Use a jumbotron or page header to call out big news - your restaurant is opening a new location!
 Style the restaurant name with a hosted or embedded font.

@@ -24,7 +24,10 @@ table, th {
   padding: 10px 10px;
 }
 
+
+
 .image {
+  border-radius: 5px;
   width: 400px;
   height: 150px;
   background-image: url('images/bananas.jpg');
@@ -39,7 +42,7 @@ table, th {
   text-align: center;
 }
 
+
 #main {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 10px 5px;
 }

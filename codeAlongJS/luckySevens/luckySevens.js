@@ -15,20 +15,29 @@
 // 7.	When the game is over, display the following output:
 // Note: Give your user the opportunity to play again.
 
-var money = 10;
-if (money > 0) {
-  luckySevens();
-} else {
-  console.log("You are broke");
-}
+
+
+
+var sum = 0;
 
 function luckySevens() {
-  var diceOne = Math.ceil(Math.random() * 6);
-  var diceTwo = Math.ceil(Math.random() * 6);
-  var sum = diceOne + diceTwo;
-  if (sum === 7) {
-    money += 4;
+
+  var enteredNum = document.getElementById("userNum").value;
+  if (enteredNum >= 0) {
+    window.alert("playing1");
+        // anotherFunction();
   } else {
-    money -= 1;
+    window.alert("Cannot play with less than 0");
   }
 }
+
+// function anotherFunction() {
+//   var diceOne = Math.ceil(Math.random() * 6);
+//   var diceTwo = Math.ceil(Math.random() * 6);
+//   var sum = diceOne + diceTwo;
+//   if (sum === 7) {
+//     enteredNum += 4;
+//   } else {
+//     enteredNum -= 1;
+//   }
+// }

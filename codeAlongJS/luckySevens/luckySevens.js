@@ -15,39 +15,47 @@
 // 7.	When the game is over, display the following output:
 // Note: Give your user the opportunity to play again.
 
-function playGame() {
-  var balance = document.getElementById("betAmount").value;
+
+var sum = 0;
+var money = 0;
+var allMoney = [];
+var maxMoney;
+var highestRollCount;
+var rollCount;
+
+
+function rollDice() {
+  document.getElementById("play").innerHTML = "Play Again";
+
+  var balance = document.getElementById("betAmount").value
+  var diceOne = Math.ceil(Math.random() * 6);
+  var diceTwo = Math.ceil(Math.random() * 6);
+  var diceSum = diceOne + diceTwo;
+
   if (balance > 0) {
-    rollDice();
+    if (diceSum === 7) {
+      money += 4;
+      allMoney.push(money);
+      console.log(money, allMoney);
+    } else {
+      money--;
+      allMoney.push(money);
+      console.log(money, allMoney);
+    }
+
   } else {
     alert("Cannot play with less than 0");
   }
-}
 
-function rollDice() {
-  var balance = document.getElementById("betAmount").value;
-  var sum = balance;
-  var money = 0;
-  var maxMoney = 0;
-  var diceOne = Math.ceil(Math.random() * 6);
-  var diceTwo = Math.ceil(Math.random() * 6);
-  var rollCount = 0;
-  var sum = diceOne + diceTwo;
-  if (sum === 7) {
-    money += 4;
-    rollCount++;
-  } else {
-    money--;
-    rollCount++;
-  }
 
-  if (maxMoney < money) {
-    maxMoney = money;
-  }
+  maxMoney = Math.max.apply(Math, allMoney);
+  rollCount = maxMoney.length;
+
+  return alert('program ran');
 
 }
 
-document.getElementById("startingBet").innerHTML = document.getElementById("betAmount").value;
+document.getElementById("startingBet").innerHTML = document.getElementById("betAmount").value;;
 document.getElementById("totalRolls").innerHTML = rollCount;
-document.getElementById("highestAmount").innerHTML = maxMoney;
+document.getElementById("highestAmount").innerHTML = allMoney;
 document.getElementById("highestRollCount").innerHTML = rollCount;

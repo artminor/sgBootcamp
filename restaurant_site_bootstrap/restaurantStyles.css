@@ -39,6 +39,14 @@ table, th {
     opacity: 1;
 }
 
+.carousel, .slide,
+.carousel .carousel-inner,
+.carousel .carousel-item,
+.carousel .carousel-item img,
+.carousel .carousel-control {
+  border-radius: 10px;
+  overflow: hidden;
+}
 .content {
   margin: auto;
   text-align: center;

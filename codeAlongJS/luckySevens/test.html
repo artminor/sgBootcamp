@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      var sum = 0;
+      var money = 0;
+      var allMoney = [];
+      var maxMoney = 0;
+      var highestRollCount = 0;
+      var rollCount = 0;
+
+      rollDice();
+
+      function rollDice() {
+
+        var balance = 5;
+        var diceOne = Math.ceil(Math.random() * 6);
+        var diceTwo = Math.ceil(Math.random() * 6);
+        var diceSum = diceOne + diceTwo;
+
+        if (balance > 0) {
+          if (diceSum === 7) {
+            money += 4;
+            allMoney.push(money);
+          } else {
+            money--;
+            allMoney.push(money);
+          }
+
+        } else {
+          alert("Cannot play with less than 0");
+        }
+
+
+        maxMoney = Math.max.apply(Math, allMoney);
+        rollCount = maxMoney.length;
+
+        return alert(money);
+
+      }
+
+
+      // document.getElementById("startingBet").innerHTML = document.getElementById("betAmount").value;;
+      // document.getElementById("totalRolls").innerHTML = rollCount;
+      // document.getElementById("highestAmount").innerHTML = allMoney;
+      // document.getElementById("highestRollCount").innerHTML = rollCount;
+    </script>
+
+
+  </body>
+
+</html>

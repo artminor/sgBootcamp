@@ -10,10 +10,6 @@
 
     <title>Contact Me</title>
 
-
-
-
-
   </head>
 
   <body>
@@ -37,18 +33,13 @@
 
       <div id="form">
         <form action="submit.html" method="POST">
-          <!-- <div class="warning">
-            The following errors occured:
-          </div>
-          <p class="warning"> First Name is required. </p> -->
           <label for="firstName">First Name:</label> <br />
-          <input type="text" id="firstName" name="firstName"> <br />
+          <input type="text" id="firstName" name="firstName" required> <br />
           <label for="lastName">Last Name:</label><br />
-          <input type="text" id="lastName" name="lastName"> <br />
+          <input type="text" id="lastName" name="lastName" required> <br />
           <label for="phone">Phone Number:</label><br />
-          <input type="text" id="phone" name="phone"> <br />
+          <input type="text" id="phone" name="phone" required> <br />
           <label for="contact">Reason for Inquiry:</label><br />
-
           <select id="contact" name="contact">
           <option value="default" selected>Catering</option>
           <option value="privateParty">Private Party</option>

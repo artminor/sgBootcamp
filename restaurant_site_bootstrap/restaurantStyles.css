@@ -1,7 +1,9 @@
-
-
 a:visited {
   color: green !important;
+}
+
+a:hover{
+  font-weight:bold;
 }
 
 p {
@@ -24,24 +26,23 @@ table, th {
   padding: 10px 10px;
 }
 
+#beverages{
+  padding-top: 20px;
+}
 
-
-.image {
-  border-radius: 5px;
-  width: 400px;
-  height: 150px;
-  background-image: url('images/bananas.jpg');
-  background-size: 100%;
-  background-position: center;
-  margin: auto;
-  display: block;
+.jumbotron {
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin: 10px 5px;
+    opacity: 1;
 }
 
 .content {
   margin: auto;
   text-align: center;
 }
-
 
 #main {
   padding: 10px 5px;

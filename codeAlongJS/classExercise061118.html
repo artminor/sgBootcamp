@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+
+    <p id="demo">
+
+    </p>
+    <script>
+      if (3 > 9) {
+        document.getElementById("demo").innerHTML = "I get printed";
+      } else {
+        document.getElementById("demo").innerHTML = "I don't get printed";
+      }
+
+      changeTemp(42);
+
+      var cel;
+      var fah;
+
+      function changeTemp(fah) {
+        cel = (fah - 32) * (5 / 9);
+        return cel;
+      }
+      document.getElementById("demo").innerHTML = cel;
+
+      var dollar;
+      var pound;
+      var rate;
+
+      function converter(dollar, rate) {
+        pound = dollar * rate;
+        return pound;
+      }
+
+      converter(3, 4);
+
+
+      document.getElementById("demo").innerHTML = pound;
+    </script>
+  </body>
+
+</html>

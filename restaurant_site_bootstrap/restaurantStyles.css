@@ -46,6 +46,7 @@ table, th {
 .carousel .carousel-control {
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
 }
 
 .content {

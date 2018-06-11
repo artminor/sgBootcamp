@@ -4,7 +4,6 @@
   <head>
     <meta charset="utf-8">
     <link href="luckySevens.css" rel="stylesheet" type="text/css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -22,15 +21,15 @@
         <div class="form-group">
           <form action="submit.html" method="POST">
             <label>Starting Bet:</label>
-            <input type="number" id="betAmount" class="form-control" placeholder="Enter number greater than 0">
+            <input type="number" id="betAmount" class="form-control" placeholder="Enter number greater than 0" required></input>
             <br>
-            <button id="play" class="btn btndefault btn-lg" onclick="rollDice()">Play</button></input>
+            <button id="play" class="btn btndefault btn-lg" onclick="rollDice()">Play</button>
             <hr/>
           </form>
         </div>
       </div>
     </div>
-    </div>
+
 
     <div class="container">
       <h3>Results</h3>

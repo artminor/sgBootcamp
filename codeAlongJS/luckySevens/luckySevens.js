@@ -21,7 +21,7 @@ var money = 0;
 var allMoney = [];
 var maxMoney;
 var highestRollCount;
-var rollCount;
+var totalRolls = 0;
 
 
 function rollDice() {
@@ -36,6 +36,7 @@ function rollDice() {
     if (diceSum === 7) {
       money += 4;
       allMoney.push(money);
+      totalRolls++;
       console.log(money, allMoney);
     } else {
       money--;
@@ -49,13 +50,13 @@ function rollDice() {
 
 
   maxMoney = Math.max.apply(Math, allMoney);
-  rollCount = maxMoney.length;
+  totalRolls = maxMoney.length;
 
   return alert('program ran');
 
 }
 
 document.getElementById("startingBet").innerHTML = document.getElementById("betAmount").value;;
-document.getElementById("totalRolls").innerHTML = rollCount;
+document.getElementById("totalRolls").innerHTML = totalRolls;
 document.getElementById("highestAmount").innerHTML = allMoney;
 document.getElementById("highestRollCount").innerHTML = rollCount;

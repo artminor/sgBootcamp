@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+//exercise 1
+// var person = {firstName:"John", lastName:"Doe"};
+// document.getElementById("demo").innerHTML = person.firstName;
+
+//exercise 2
+// var person = {firstName:"John", lastName:"Doe", country: "USA"};
+// document.getElementById("demo").innerHTML = person.country;
+
+//exercise 3
+// var person = {name:"John", age:50};
+// document.getElementById("demo").innerHTML =
+// person.name + " is " + person.age + " years old.";
+
+var today = new Date;
+console.log(today);
+
+var hourNow = today.getHours();
+var minNow = today.getMinutes();
+
+function greet(){
+  if (hourNow<11){
+    document.getElementById("demo").innerHTML = "Good morning, it's now " + hourNow+ " o'clock and " +minNow + " minutes.";
+  }else if (hourNow<16){
+    document.getElementById("demo").innerHTML = "Good afternoon, it's now " + hourNow + " o'clock and " +minNow + " minutes.";
+  }else{
+    document.getElementById("demo").innerHTML = "Good evening, it's now " + hourNow +" o'clock and " +minNow + " minutes.";
+  }
+}
+
+greet();
+
+</script>
+
+</body>
+</html>

@@ -10,6 +10,10 @@ html{
   overflow: hidden;
 }
 
+.vid {
+  position: absolute;
+  width: 100vw;
+}
 
 header{
   font-family: 'Rock Salt', cursive;
@@ -36,7 +40,6 @@ header h1{
   margin-top:-50px;
 }
 
-
 header, header:before{
   background: 50% 50% /cover;
 }
@@ -58,7 +61,7 @@ header:before{
 }
 
 header * {
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 0.2em;
   text-align: center;
   margin:0;
@@ -66,8 +69,14 @@ header * {
 }
 
 header p{
-transition: 10s;
+  transition: 3s;
 }
+
+.jumbotron{
+  background: rgba(255, 255, 255, 0.01);
+}
+
+
 
 /*
 nav{
@@ -133,7 +142,6 @@ nav ul li a.active{
   border-radius: 6px;
 } */
 
-
 section.sec1{
   width: 100%;
   height: 100vh;
@@ -161,7 +169,6 @@ footer p{
   font-size:15px;
 }
 
-
 footer ul li{
   /* list-style: none; */
   margin: 0px 30px;
@@ -178,4 +185,99 @@ footer ul li:hover{
   color:#292929;
   border:1px solid #292929;
   transition: .5s;
+}
+
+
+
+/* codes.html bg-box */
+.bg-box{
+  width: 100%;
+  height: auto;
+}
+
+.bg-box ul{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  margin:0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.bg-box ul li{
+  list-style: none;
+  width: 10%;
+  height: 100%;
+  background: transparant;
+  box-shadow: 5px 0px 5px rgba(0,0,0,0.2);
+  animation: bgcolor infinite linear 5s;
+}
+
+@keyframes bgcolor {
+  0%{
+    background: #40e0d0;
+  }
+  20%{
+    background: #ff8c00;
+  }
+  40%{
+    background: #ff0080;
+  }
+  60%{
+    background: #00f260;
+  }
+  80%{
+    background: #0575e6;
+  }
+  100%{
+    background: #c0392b;
+  }
+}
+
+.bg-box ul li:nth-child(1){
+  animation-delay: .2s;
+  z-index:10;
+}
+.bg-box ul li:nth-child(2){
+  animation-delay: .4s;
+  z-index:9;
+}
+.bg-box ul li:nth-child(3){
+  animation-delay: .6s;
+  z-index:8;
+}
+.bg-box ul li:nth-child(4){
+  animation-delay: .8s;
+  z-index:7;
+}
+.bg-box ul li:nth-child(5){
+  animation-delay: 1s;
+  z-index:6;
+}
+.bg-box ul li:nth-child(6){
+  animation-delay: 1.2s;
+  z-index:5;
+}
+.bg-box ul li:nth-child(7){
+  animation-delay: 1.4s;
+  z-index:4;
+}
+.bg-box ul li:nth-child(8){
+  animation-delay: 1.6s;
+  z-index:3;
+}
+.bg-box ul li:nth-child(9){
+  animation-delay: 1.8s;
+  z-index:2;
+}.bg-box ul li:nth-child(10){
+  animation-delay: 2s;
+  z-index:1;
+}
+.bg-box ul li{
+  font-size:40px;
+  color:#fff;
+  padding-top:45vh;
+  padding-left:30px;
 }

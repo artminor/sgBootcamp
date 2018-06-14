@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title></title>
+    <title>Display Evens</title>
   </head>
 
   <body>
@@ -13,23 +13,26 @@
       <div id="form">
         <div class="form-group">
           <form>
+            <br>
             <label>Starting Number:</label>
             <input type="number" id="startingNum" class="form-control" placeholder="Enter positive number" required></input>
+            <br>
             <label>Ending Number:</label>
             <input type="number" id="endingNum" class="form-control" placeholder="Enter positive number" required></input>
+            <br>
             <label>Step Value:</label>
             <input type="number" id="stepVal" class="form-control" placeholder="Enter positive increment" required></input>
             <br>
-            <button id="play" class="btn btndefault btn-lg" onclick="evenNums();">Play</button>
+            <br>
+            <button type="submit" id="play" class="btn" onclick="evenNums();">Play</button>
+            <button type="reset" id="resetButton" class="btn">Reset</button>
             <hr/>
           </form>
         </div>
       </div>
 
-      <div class="container">
-        <p id="results">
-          results
-        </p>
+      <div id="results">
+        results
       </div>
 
     </div>
@@ -37,22 +40,33 @@
 
 
     <script>
-      var start = document.getElementById("startingNum").value;
-      var end = document.getElementById("endingNum").value;
-      var step = document.getElementById("stepVal").value;
+      function evenNums() {
+        var numArr = [];
+        var start = document.getElementById("startingNum").value;
+        var end = document.getElementById("endingNum").value;
+        var step = document.getElementById("stepVal").value;
 
-      function evenNums(start, end, step) {
-        for (var i = start; i < end; i += step) {
-          document.write("hello");
-          document.getElementById("results").innerHTML = "hello";
+        for (start; start <= end; start += step) {
+          if (start % 2 === 0) {
+            numArr.push(start);
+          }
         }
+        // for (var i = start; i < end; i += step) {
+        //   if (i % 2 === 0) {
+        //     numArr.push(i);
+        //   }
+        // }
+        return numArr;
       }
+
+
+      document.getElementById("results").innerHTML = "hello";
     </script>
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/JavaScript" src="displayEvens.js"></script>
+    <!-- <script type="text/JavaScript" src="displayEvens.js"></script> -->
   </body>
 
 </html>

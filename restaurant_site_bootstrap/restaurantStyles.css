@@ -47,6 +47,8 @@ table, th {
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .content {

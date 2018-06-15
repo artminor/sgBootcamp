@@ -27,7 +27,7 @@ var totalRolls = 0;
 function rollDice() {
   document.getElementById("play").innerHTML = "Play Again";
 
-  var balance = document.getElementById("betAmount").value
+  var balance = document.getElementById("betAmount").value;
   var diceOne = Math.ceil(Math.random() * 6);
   var diceTwo = Math.ceil(Math.random() * 6);
   var diceSum = diceOne + diceTwo;
@@ -37,11 +37,13 @@ function rollDice() {
       money += 4;
       allMoney.push(money);
       totalRolls++;
+      alert(totalRolls);
       console.log(money, allMoney);
     } else {
       money--;
       allMoney.push(money);
       console.log(money, allMoney);
+      alert(totalRolls);
     }
 
   } else {
@@ -52,11 +54,17 @@ function rollDice() {
   maxMoney = Math.max.apply(Math, allMoney);
   totalRolls = maxMoney.length;
 
+
+  document.getElementById("startingBet").innerHTML = document.getElementById("betAmount").value;;
+  document.getElementById("totalRolls").innerHTML = totalRolls;
+  document.getElementById("highestAmount").innerHTML = allMoney;
+  document.getElementById("highestRollCount").innerHTML = rollCount;
+
+  totalRolls=0;
+
   return alert('program ran');
 
-}
 
-document.getElementById("startingBet").innerHTML = document.getElementById("betAmount").value;;
-document.getElementById("totalRolls").innerHTML = totalRolls;
-document.getElementById("highestAmount").innerHTML = allMoney;
-document.getElementById("highestRollCount").innerHTML = rollCount;
+
+
+}

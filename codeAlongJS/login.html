@@ -1,0 +1,42 @@
+<h1>LOGIN</h1>
+
+<div class="container">
+  <label for="uname">Username</label>
+  <input type="text" placeholder="Enter Username" name="username" required>
+<br><br>
+  <label for="psw">Password</label>
+  <input type="password" placeholder="Enter Password" name="pswSaved" required>
+<br><br>
+
+  <button type="submit" class="signupbtn">Sign Up</button>
+  
+</div>
+
+<br>
+  <div class="container">
+    <label for="uname">Username</label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+<br><br>
+    <label for="psw">Password</label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+<br><br>
+    <button type="submit" onclick="validatePass()">Login</button>
+  </div>
+
+
+<script>
+
+function validatePass() {
+  var w=document.getElementById('username').value;
+    var x = document.getElementById('pswSaved').value;
+    var y=document.getElementById('uname').value;
+    var z=document.getElementById('psw').value;
+
+    if (w === y && x===z) {
+        return alert("Thanks, now I know your password.");
+    }else{
+      return   alert("'yeah...no' #tryAgain");
+    }
+}
+
+</script>

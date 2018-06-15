@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <style>
+    p {
+      position: relative;
+      top: 30vh;
+      left: 20vw;
+    }
+
+    p button{
+      color: red;
+      padding: 5px 5px;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <p>
+    <input id="userInput" type="text" name="usrname" placeholder="What's your name?" required>
+    <button type="submit" onclick="sayHi()">Hey</button>
+  </p>
+
+  <p id="output"></p>
+
+  <script>
+    var today = new Date;
+    var hourNow = today.getHours();
+    var minNow = today.getMinutes();
+    var x = document.getElementById('userInput').value;
+
+    function sayHi() {
+      if (hourNow < 11) {
+        document.getElementById('output').innerHTML = "Hey, good morning! It's " + today + ", " + document.getElementById('userInput').value + "!";
+      } else if (hourNow < 16) {
+        document.getElementById('output').innerHTML = "Hey, good afternoon! It's " + today + ", " + document.getElementById('userInput').value + "!";
+      } else {
+        document.getElementById('output').innerHTML = "Hey, good evening! It's " + today + ", " + document.getElementById('userInput').value + "!";
+      }
+
+    }
+  </script>
+
+  <body>
+
+</html>

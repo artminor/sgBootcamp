@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE-edge">
-  <title>Contact Jun</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Contact Jun</title>
 
-  <style type="text/css" media="screen">
-    body {
-      margin: 0;
-      padding: 0;
-    }
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-    .container {
-      position: center;
-      height: 100vh;
-      overflow: hidden;
-      padding-top: 200px;
-    }
+      .container {
+        position: center;
+        height: 100vh;
+        overflow: hidden;
+        padding-top: 200px;
+      }
 
-    .vid {
-      position: absolute;
-      height: 100vh;
-    }
+      .vid {
+        position: absolute;
+        height: 100vh;
+      }
 
-    .contact {
-      background-color: rgba(255, 255, 255, 0.3);
-      position: absolute;
-      /* top: calc(50vh-200px);
+      .contact {
+        background-color: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        /* top: calc(50vh-200px);
         left: calc(50vh-150px); */
-      width: 300px;
-      height: 325px;
-      border-radius: 10px;
-      margin-left: 50vw;
-      margin-top: 25vh;
-    }
+        width: 300px;
+        height: 325px;
+        border-radius: 10px;
+        margin-left: 50vw;
+        margin-top: 25vh;
+      }
 
-    form {
-      margin: 50px 50px;
-    }
+      form {
+        margin: 50px 50px;
+      }
 
-    .contact form input,
-    .contact form textarea {
-      padding: 10px 0px;
-      margin-bottom: 10px;
-      background-color: white;
-      outline: none;
-      border: 0px;
-      width: 200px;
-      border-radius: 3px;
-    }
+      .contact form input,
+      .contact form textarea {
+        padding: 10px 0px;
+        margin-bottom: 10px;
+        background-color: white;
+        outline: none;
+        border: 0px;
+        width: 200px;
+        border-radius: 3px;
+      }
 
-    .contact form label {
-      color: white;
-    }
-  </style>
+      .contact form label {
+        color: white;
+      }
+    </style>
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <div class="container">
-    <video class="vid" loop muted autoplay="true">
-        <source src="media/nyc.mp4" type="video/mp4" media="">
+    <div class="container">
+      <video class="vid" loop muted autoplay="true">
+        <source src="media/nyc.mp4" type="video/mp4" style="position:top;" media="">
       </video>
-    <div class="contact">
-      <form>
-        <input type="firstName" name="" value="" placeholder="   First Name" required>
-        <input type="lastName" name="" value="" placeholder="   Last Name" required>
-        <input type="email" name="" value="" placeholder="   Email" required>
-        <label for="info">Reason for Contact</label><br/>
-        <textarea id="reason"></textarea>
-        <input type="submit" name="submit " value="Send Request">
-      </form>
+      <div class="contact">
+        <form action="submit.php" method="post">
+          <input type="firstName" name="" value="" placeholder="   First Name" required>
+          <input type="lastName" name="" value="" placeholder="   Last Name" required>
+          <input type="email" name="" value="" placeholder="   Email" required>
+          <label for="info">Reason for Contact</label><br/>
+          <textarea id="reason"></textarea>
+          <input type="submit" name="submit " value="Send Request">
+        </form>
+      </div>
     </div>
-  </div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("form").submit(function() {
-        alert("Thanks for the message, I'll get back to you as soon as possible, maybe, just kidding, but honestly though, maybe.")
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("form").submit(function() {
+          alert("Thanks for the message, I'll get back to you as soon as possible, maybe, just kidding, but honestly though, maybe.")
+        });
       });
-    });
-  </script>
+    </script>
 
 
-</body>
+  </body>
 
 </html>

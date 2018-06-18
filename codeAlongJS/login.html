@@ -1,42 +1,70 @@
-<h1>LOGIN</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<div class="container">
-  <label for="uname">Username</label>
-  <input type="text" placeholder="Enter Username" name="username" required>
-<br><br>
-  <label for="psw">Password</label>
-  <input type="password" placeholder="Enter Password" name="pswSaved" required>
-<br><br>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
 
-  <button type="submit" class="signupbtn">Sign Up</button>
-  
-</div>
+  <body>
 
-<br>
-  <div class="container">
-    <label for="uname">Username</label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-<br><br>
-    <label for="psw">Password</label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-<br><br>
-    <button type="submit" onclick="validatePass()">Login</button>
-  </div>
+    <h3>Please sign up first</h3>
+
+    <div class="container">
+      <form id='signMeUp'>
+        <label for="uname">Username</label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+        <br><br>
+        <label for="psw">Password</label>
+        <input type="password" placeholder="Enter Password" name="pswSaved" id="pswSaved" required>
+        <br><br>
+
+        <button type="submit" class="signupbtn" onclick="signUp()">Sign Up</button>
+
+        <br><br>
+      </form>
+
+      <h3>Log In</h3>
+
+      <form id='login'>
+        <label for="uname">Username</label>
+        <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+        <br><br>
+        <label for="psw">Password</label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <br><br>
+        <button type="submit" onclick="validatePass()">Login</button>
+      </form>
+    </div>
+
+    <script>
+      var storedName = null;
+      var storedPassword = null;
+
+      document.getElementById('signMeUp').onsubmit = function signUp() {
+
+        storedName = document.getElementById('username').value;
+        storedPassword = document.getElementById('pswSaved').value;
+        if (storedName !== null && storedPassword !== null) {
+          return alert('Thanks for signing up!');
+        }
+      }
 
 
-<script>
+      document.getElementById(
+        'login').onsubmit = function validatePass() {
+        var inputName = document.getElementById('uname').value;
+        var inputPassword = document.getElementById('psw').value;
+        if (storedName === inputName && storedPassword === inputPassword) {
+          return alert(
+            "Thanks, now I know your password.");
+        } else if (storedName === inputName || storedPassword === inputPassword) {
+          return alert("Either username does not exist or passwords do not match. #tryAgain");
+        } else {
+          return alert("'yeah...no' #tryAgain");
+        }
+      }
+    </script>
+  </body>
 
-function validatePass() {
-  var w=document.getElementById('username').value;
-    var x = document.getElementById('pswSaved').value;
-    var y=document.getElementById('uname').value;
-    var z=document.getElementById('psw').value;
-
-    if (w === y && x===z) {
-        return alert("Thanks, now I know your password.");
-    }else{
-      return   alert("'yeah...no' #tryAgain");
-    }
-}
-
-</script>
+</html>
